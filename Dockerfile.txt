@@ -1,0 +1,9 @@
+# Usamos una imagen muy ligera de Nginx
+FROM nginx:alpine
+
+# Copiamos tus archivos HTML al lugar donde Nginx los busca
+# El punto (.) significa "la carpeta actual del repo"
+COPY . /usr/share/nginx/html
+
+# Exponemos el puerto 80 (el estándar web)
+EXPOSE 80
